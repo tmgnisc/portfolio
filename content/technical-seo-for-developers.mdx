@@ -1,0 +1,32 @@
+---
+title: "Technical SEO for Developers: What Engineers Get Wrong"
+publishedAt: "2025-02-14"
+updatedAt: "2025-02-14"
+author: "Nischal Tamang"
+summary: "Working between engineering and SEO teams taught me that most technical SEO issues are really just engineering defaults nobody questioned."
+image: "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?w=800&h=192&fit=crop"
+---
+
+# Technical SEO for Developers: What Engineers Get Wrong
+
+Working as a Technical SEO Specialist alongside full-stack development, I keep running into the same pattern: SEO problems that engineers dismiss as "marketing stuff" are almost always engineering defaults that quietly shipped without anyone questioning them.
+
+## Rendering strategy is an SEO decision
+
+Choosing client-side rendering for a marketing page isn't just a performance tradeoff — it directly affects whether crawlers see your content the way users do. On a Next.js site, that means being deliberate about what's server-rendered versus client-only, not defaulting to whatever pattern is easiest to wire up.
+
+## Redirects compound
+
+A single unnecessary redirect hop feels harmless. A redirect chain built up over three years of "just point the old URL somewhere" is a measurable crawl budget and ranking problem. Every redirect I introduce now gets a note explaining why it exists, so the next person doesn't add another hop on top of it.
+
+## Schema markup isn't decoration
+
+Structured data is one of the few places where a few lines of JSON-LD directly change how your content is represented in search results. I treat schema as part of the page's contract with search engines, not an optional add-on bolted on after launch.
+
+## Site audits find defaults, not bugs
+
+Most technical SEO audits I run don't turn up broken code. They turn up defaults: unoptimized images, missing canonical tags, inconsistent heading hierarchy, orphaned pages with no internal links pointing to them. None of it looks like a bug in a code review. All of it adds up.
+
+## Where the two roles actually meet
+
+The reason I can do both jobs is that neither is really separate from the other. Performance optimization, clean information architecture, and predictable URL structures are engineering concerns and SEO concerns at the same time. Once you stop treating them as different departments, most of the "hard" SEO problems turn out to be normal engineering problems with a search engine as an additional stakeholder.

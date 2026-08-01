@@ -1,0 +1,28 @@
+---
+title: "From Java to Next.js: Building Full-Stack Apps Across Any Stack"
+publishedAt: "2025-03-20"
+updatedAt: "2025-03-20"
+author: "Nischal Tamang"
+summary: "Notes on moving between Java/Spring Boot backends and Next.js/NestJS frontends without losing your architectural footing."
+image: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&h=192&fit=crop"
+---
+
+# From Java to Next.js: Building Full-Stack Apps Across Any Stack
+
+I started with Java and Spring Boot, and now spend most of my time in Next.js, NestJS, and TypeScript. Switching stacks that much sounds like it should slow you down. In practice, it forced me to separate what's actually architecture from what's just a framework's opinion.
+
+## The layers barely change
+
+A Spring Boot service with controllers, services, and repositories maps almost directly onto a NestJS module with controllers, providers, and a data layer. The naming is different; the separation of concerns — request handling, business logic, persistence — is the same problem solved the same way. Once you see that, learning a new backend framework is mostly learning where things live, not relearning how to structure an application.
+
+## Type systems change how you design APIs
+
+Java's static typing and TypeScript's structural typing feel similar day-to-day but push you toward different habits. TypeScript's flexibility makes it easy to under-specify a contract between frontend and backend. I bring the Java habit of designing the shape of data first, then implementing against it, into every TypeScript project — usually as a shared types package or a Prisma schema that both ends of the stack agree on.
+
+## Tooling maturity isn't equal, and that's fine
+
+The Java ecosystem's tooling for large enterprise systems — dependency injection, testing frameworks, build tooling — is mature in ways the Node ecosystem is still catching up on. Rather than fighting that gap, I import the discipline: explicit dependency boundaries, integration tests around the parts that talk to a database, and CI that fails loudly instead of quietly.
+
+## Pick the stack for the constraint, not the trend
+
+Most of my recent work is Next.js and NestJS because that's what the product and the team need — fast iteration, one language across the stack, and a large hiring pool. But when a client needs a system that has to run unattended for years with strict reliability guarantees, Java and Spring Boot are still the tool I reach for. Neither stack is "better." They're built for different failure modes, and knowing both means the constraint decides, not habit.
