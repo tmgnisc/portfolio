@@ -5,7 +5,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
-import { AboutGallery } from "@/components/section/about-gallery";
 import ContactSection from "@/components/section/contact-section";
 import HackathonsSection from "@/components/section/hackathons-section";
 import WorkSection from "@/components/section/work-section";
@@ -62,7 +61,9 @@ export default function Page() {
             </div>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 4.3}>
-            <AboutGallery />
+            <blockquote className="border-l-2 border-border pl-4 text-sm italic text-muted-foreground">
+              &ldquo;I know, but I don&apos;t know how I know.&rdquo;
+            </blockquote>
           </BlurFade>
         </div>
       </section>
