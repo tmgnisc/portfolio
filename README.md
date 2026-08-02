@@ -1,47 +1,31 @@
-<div align="center">
-<img alt="Portfolio" src="https://github.com/dillionverma/portfolio/assets/16860528/57ffca81-3f0a-4425-b31d-094f61725455" width="90%">
-</div>
+# Nischal Tamang — Portfolio
 
-# Portfolio [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdillionverma%2Fportfolio)
+My personal portfolio site: [nischaltamang.com.np](https://nischaltamang.com.np)
 
-Built with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://magicui.design/), deployed on Vercel.
+Founder & CTO at [Nirvix Technology](https://www.nirvixtech.com), full-stack developer, and 11× hackathon winner. This site covers my work experience, hackathon wins, education, and blog.
 
-# Features
+## Stack
 
-- Setup only takes a few minutes by editing the [single config file](./src/data/resume.tsx)
-- Built using Next.js 14, React, Typescript, Shadcn/UI, TailwindCSS, Framer Motion, Magic UI
-- Includes a blog
-- Responsive for different devices
-- Optimized for Next.js and Vercel
+- [Next.js](https://nextjs.org/) (App Router) + TypeScript
+- [Tailwind CSS](https://tailwindcss.com/) + [shadcn/ui](https://ui.shadcn.com/) + [Magic UI](https://magicui.design/)
+- [Content Collections](https://www.content-collections.dev/) for the MDX-powered blog
+- Deployed on Vercel
 
-# Getting Started Locally
+## Running locally
 
-1. Clone this repository to your local machine:
+```bash
+npm install
+npm run dev
+```
 
-   ```bash
-   git clone https://github.com/dillionverma/portfolio
-   ```
+The site config (name, bio, skills, work history, hackathons, education, socials) lives in a single file: [`src/data/resume.tsx`](./src/data/resume.tsx). Blog posts are MDX files in [`content/`](./content).
 
-2. Move to the cloned directory
+```bash
+npm run build   # production build
+npm run start   # serve the production build
+npm run lint    # lint
+```
 
-   ```bash
-   cd portfolio
-   ```
+## License
 
-3. Install dependencies:
-
-   ```bash
-   pnpm install
-   ```
-
-4. Start the local Server:
-
-   ```bash
-   pnpm dev
-   ```
-
-5. Open the [Config file](./src/data/resume.tsx) and make changes
-
-# License
-
-Licensed under the [MIT license](https://github.com/dillionverma/portfolio/blob/main/LICENSE.md).
+Based on the [Magic UI portfolio template](https://magicui.design/) by Dillion Verma, licensed under [MIT](./LICENSE). Content, images, and personal data on this site belong to Nischal Tamang.
